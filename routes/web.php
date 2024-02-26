@@ -122,4 +122,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/unit-kerja', function () {
         return view('unit_kerja');
     })->name('admin.unit_kerja');
+
+    Route::get('/download-pdf', function () {
+        return view('form');
+    })->name('admin.form-pdf');
 });

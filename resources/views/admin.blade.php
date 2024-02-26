@@ -32,6 +32,7 @@
 
         </div>
         <div class="panel h-full">
+            <a href="{{ route('admin.form-pdf') }}" class="btn btn-danger">Download PDF</a>
 
         </div>
 
@@ -122,9 +123,6 @@
 
     <script>
         document.addEventListener("alpine:init", () => {
-
-
-
             Alpine.data('invoiceList', () => ({
                 selectedRows: [],
                 items: [{
