@@ -118,4 +118,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', function () {
         return view('admin');
     })->name('admin.index');
+
+    Route::get('/unit-kerja', function () {
+        return view('unit_kerja');
+    })->name('admin.unit_kerja');
 });
