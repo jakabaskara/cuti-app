@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrintPDFController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'index');
@@ -123,7 +124,5 @@ Route::group(['prefix' => 'admin'], function () {
         return view('unit_kerja');
     })->name('admin.unit_kerja');
 
-    Route::get('/download-pdf', function () {
-        return view('form');
-    })->name('admin.form-pdf');
+    Route::get('/download-pdf', [PrintPDFController::class, 'index'])->name('admin.form-pdf');
 });
