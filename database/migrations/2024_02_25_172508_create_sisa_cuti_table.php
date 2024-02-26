@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_karyawan')->constrained('karyawan');
             $table->enum('jenis_cuti', ['Cuti Panjang', 'Cuti Tahunan']);
-            $table->integer('periode_awal');
-            $table->integer('periode_akhir');
+            $table->date('periode_awal');
+            $table->date('periode_akhir');
             $table->timestamps();
         });
     }
