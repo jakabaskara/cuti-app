@@ -2,12 +2,6 @@
     
     <p class="text-2xl">Data Karyawan</p>
 
-    <table>
-        <tr>
-            <td>1</td>
-        </tr>
-    </table>
-    
     <div class="grid xl:grid-cols-3 gap-6 mb-6 mt-5">
         <div class="panel h-full xl:col-span-2">
     
