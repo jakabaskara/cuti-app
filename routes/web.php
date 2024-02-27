@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PrintPDFController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\KaryawanController;
 
 Route::view('/', 'index');
 Route::view('/analytics', 'analytics');
@@ -123,6 +124,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/unit-kerja', function () {
         return view('unit_kerja');
     })->name('admin.unit_kerja');
+
+    Route::get('/karyawan', function () {
+        return view('karyawan');
+    })->name('admin.karyawan');
+    // Route::resource('karyawan', KaryawanController::class);
 
     Route::get('/download-pdf', [PrintPDFController::class, 'index'])->name('admin.form-pdf');
 });
