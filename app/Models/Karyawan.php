@@ -20,7 +20,7 @@ class Karyawan extends Model
 
     public function users()
     {
-        return $this->hasOne(Users::class, 'id_users');
+        return $this->hasOne(Karyawan::class, 'id_users');
     }
 
     public function unitKerja()
